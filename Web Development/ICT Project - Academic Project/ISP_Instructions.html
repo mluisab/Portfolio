@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+            <title>IS&P Intructions</title>
+            <style>
+            .logo {
+                width: 400px;  
+                height: 50px;  
+                object-position: left top;  
+                }
+            .topnav {
+                background-color: #fbfbfbef;
+                overflow:hidden;
+                box-shadow: 0 4px 8px 0 rgba(142, 141, 141, 0.174), 0 6px 20px 0 rgba(146, 145, 145, 0.128) inset;
+            }
+            .topnav a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                font-size: 20px;
+                font-family: "Gerogia", serif;
+                text-decoration: none;
+            }
+            
+            .topnav a.active {
+                background-color:#e0dcdcfe;
+                color: black;
+            }
+            .overlay {
+                position:absolute;
+                background: rgba(25, 24, 24, 0.548);
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                width:100%
+            }
+            
+            .overlay_1 {
+                left:0;
+                bottom:0;
+                width:100%;
+                padding:1rem;
+                position:relative;
+                top:215px;
+            }
+            
+            .header {
+                background-image: url("https://aissr.uva.nl/binaries/_ht_1611840103770/pagebanner/content/gallery/faculteiten-en-diensten/fmg/social-sciences/aissr/roeterseiland-campus.jpg");
+                background-repeat: no-repeat;
+                background-size:cover;
+                height:350px;
+                background-position:center;
+                width:100%;
+                font-family:'Utopia Std', serif;
+                font-size: 25px;
+                color:#FFFFFF;
+            }
+            
+            body {
+                margin:0;
+            }
+            
+            h1 {
+                font-family:'Utopia Std', serif;
+                color: black;
+                text-align:center;
+                font-size: 29px;
+            }
+
+            .disclaimer {
+                font-family:'Utopia Std', serif;
+                color: #bd0032;
+                font-size: 21px;
+                margin: 0px;
+                font-style: italic;
+                font-weight: bold;
+                text-indent: 70px;
+            }
+
+            .instructions{
+                font-family:'Utopia Std', serif;
+                color: black;
+                font-size:19px;
+                float:center;
+                line-height: 1.4;
+                margin:0px;
+            }
+
+            .description {
+                font-family:'Utopia Std', serif;
+                color: black;
+                font-size:20px;
+                line-height: 1.4;
+                text-align:justify;
+            }
+
+            .pos {
+                margin:60px;
+            }
+
+            a {
+                text-decoration: none;   
+            }
+
+            a:hover {
+                text-decoration:underline;
+            }
+
+
+            .next {
+                color:#575757;
+                float:right;
+                font-family:'Utopia Std', serif;
+                font-size: 17px;
+            }
+
+            .p_n {
+                margin-right: 100px;;
+            }
+
+
+            .footer {
+                    width:100%
+            }
+
+        </style>
+        </head>
+
+        <body>
+        
+            <br>
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/1/17/Uva%C2%AEmerken_ENG.png" alt=" Uva Logo" class="logo">
+            <br>
+            <br>
+                
+            <div class="topnav">
+                <a href="{{ url_for ('Homepage') }}">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="{{ url_for ('ISP_Instructions') }}">IS&P Process</a>
+                <a href="{{ url_for ('Approved_software') }}">Approved Software</a>
+                <a href="{{ url_for ('Contacts') }}">Contacts</a>
+            </div>
+                    
+                <div class="header">
+                <div class="overlay overlay_1">
+                    <h2>IS&P Process</h2>
+                    </div>
+                </div>
+            <br>
+            
+            <h1>Instructions</h1>
+        
+            <div class="pos">
+            <div class="description">
+                <p>To ease the execution of the IS&P assessment, these instructions offer a clear guideline and 
+                    summary of the necessary steps. It is indicated to follow this guide in preparation, and after 
+                    completing the IS&P process to ensure the success of this procedure. For further support, check out the IS&P checklist 
+                which provides additional details to facilitate you during this process. </p>
+            </div>
+            </div>
+            <div class="disclaimer">
+                <p>*If personal data are processed*</p>
+            </div>
+            </div>
+            <div class="pos">
+                <ol class="instructions">
+                    <li>Make sure you have completed the preparation part of the checklist before starting the actual IS&P risk assessment. 
+                        This includes contacting necessary stakeholders and arranging a meeting to complete the assessment. 
+                        The meeting should be planned in the early stages to allow enough time for the entire procedure. Within the meeting, the following stakeholders should be present:</li>
+                        <ul class="instructions">
+                            <li>System manager (you) </li>
+                            <li>Operational manager</li>
+                            <li>Security Specialist</li>
+                            <li>Privacy Specialist</li>
+                        </ul>
+                    <br>
+                    <li>During the workshop, discuss the following parts of the form:</li>
+                        <ul class="instructions">
+                            <li>IS Questionnaires (sections 1.2 to 1.4) </li>
+                            <li>Privacy Questionnaire (section 1.5)</li>
+                    </ul>
+                        <br>
+                    <li>After completing the questionnares, determine:</li>
+                        <ul class="instructions">
+                            <li>The IS risk profile (Low, Medium, High)</li>
+                            <li>Which (if any) additional IS measures are required </li>
+                            <li>Whether a DPIA should be conducted </li>
+                            <li>Which (if any) additional privacy measures are required </li>
+                        </ul>
+                    <br>
+                    <li>After the workshop, make sure you complete the follow-up steps included in the checklist such as writing a report summarizing the results and sending it to essential stakeholders.</li>
+                </ol>
+            </div>
+            <br>
+            <div class="disclaimer">
+                <p>*If personal data are NOT processed*</p>
+            </div>
+            <div class="pos">
+            <ol class="instructions">
+                <li>Make sure you have completed the preparation part of the checklist before starting the actual IS&P risk assessment. 
+                    This includes contacting necessary stakeholders and arranging a meeting to complete the assessment. 
+                    The meeting should be planned in the early stages to allow enough time for the entire procedure. Within the meeting, the following stakeholders should be present:</li>
+                    <ul class="instructions">
+                        <li>System manager (you) </li>
+                        <li>Operational manager</li>
+                        <li>Security Specialist</li>
+                        <li>Privacy Specialist</li>
+                    </ul>
+                <br>
+                <li>During the workshop, discuss the following parts of the form:</li>
+                <ul class="instructions">
+                    <li>IS Questionnaires (sections 1.2 to 1.4) </li>
+                </ul>
+                <br>
+                <li>After completing the questionnares, determine:</li>
+                <ul class="instructions">
+                    <li>The IS risk profile (Low, Medium, High)</li>
+                    <li>Which (if any) additional IS measures are required </li>
+                    <li>Which (if any) additional privacy measures are required </li>
+                </ul>
+                <br>
+                <li>After the workshop, make sure you complete the follow-up steps included in the checklist, 
+                    such as writing a report summarizing the results and sending it to essential stakeholders.</li>
+            </ol>
+            </div>
+            <div class="p_n">
+            <a href="{{ url_for ('ISP_Checklist') }}" class="next">Checklist &raquo;</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="https://zeroheight-uploads.s3.eu-west-1.amazonaws.com/ec62f1c75cab13092ad0d0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVNYHQKZBXKWVOV%2F20230330%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20230330T145743Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c0d57af9cd4c573b3d2eaae85c66d0db50449346c556bd35a08b47f94540f204" alt ="Uva Footer" class="footer">
+
+        </body>
+    
+    </html>

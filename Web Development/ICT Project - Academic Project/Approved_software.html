@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <title>Approved software</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-basis: 100%;
+    padding: 10px;
+}
+
+.left1 {
+    flex-basis: 25%;
+}
+
+.right1 {
+    flex-basis: 75%;
+}
+
+.column {
+    float: left;
+  }
+  
+  .left2, .right2 {
+    flex-basis: 40%;
+    margin-left: 10%;
+  }
+  
+  .pic {
+    flex-basis: 20%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+.box1 {
+    width: 750px; 
+    height: fit-content;
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: 10%;
+    
+}
+
+.box2 {
+    width: 700px; 
+    height: 80px;
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #f7f7f7;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    margin-left: 20%;
+    font-family: "Utopia Std";
+    font-size: 18px;
+}
+
+.box_left, .box_right {
+    flex-basis: 50%;
+}
+
+
+
+.logo {
+    width: 400px;  
+    height: 50px;  
+    object-position: left top;  
+    }
+
+    .img_prof {
+        width: 40px;
+        height: 40px;
+
+    }
+.topnav {
+    background-color: #fbfbfbef;
+    overflow:hidden;
+    box-shadow: 0 4px 8px 0 rgba(142, 141, 141, 0.174), 0 6px 20px 0 rgba(146, 145, 145, 0.128) inset;
+}
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+    font-family: "Gerogia", serif;
+    text-decoration: none;
+}
+
+.topnav a.active {
+    background-color:#e0dcdcfe;
+    color: black;
+}
+.overlay {
+    position:absolute;
+    background: rgba(25, 24, 24, 0.548);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    overflow-x: hidden;
+}
+
+.overlay_1 {
+    left:0;
+    bottom:0;
+    width:100%;
+    padding:1rem;
+    position:relative;
+    top:205px;
+}
+
+.header {
+    background-image: url("https://wallpaperaccess.com/full/4171778.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:350px;
+    background-position:center;
+    width:100%;
+    font-family:'Utopia Std', serif;
+    font-size: 27px;
+    color:#FFFFFF;
+}
+
+body {
+    margin:0;
+}
+    .checkbox {
+    color: black;
+    font-size: 15px;
+    font-family: 'Utopia Std', serif;
+    margin-left: 15%;
+    }
+    .checkbox_title {
+    color: black;
+    font-size: 15px;
+    font-family: 'Utopia Std, serif';
+    font-weight:bold;
+    }
+    .hr {
+    width: 65%;
+    margin: 0;
+    padding: 0;
+    }
+    #textinput {
+    font-style: italic;
+    }
+    
+
+
+    .footer {
+        width: 100%;
+        height: 350px;
+        
+    }
+
+    form {
+        background-color: #FFFFFF;
+        width: 250px;
+        height: 44px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-color: black;
+        border-style: inset;
+        margin-left: 25%;
+      }
+
+      .input {
+        all: unset;
+        font-size: 16px;
+        font-family: 'Utopia Std', serif;
+        color: black;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: black;
+        opacity: 0.7; 
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+      
+      svg {
+        color: black;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      .bi::before {
+        display: inline-block;
+        content: "";
+        vertical-align: -.125em;
+        background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+        background-repeat: no-repeat;
+        background-size: 1rem 1rem;
+      }
+
+            </style>
+        </head>
+            <body>
+                <br>
+                <img src= "https://upload.wikimedia.org/wikipedia/commons/1/17/Uva%C2%AEmerken_ENG.png" alt=" Uva Logo" class="logo">
+                <br>
+                <br> 
+                <div class="topnav">
+                    <a href="{{ url_for ('Homepage') }}">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="{{ url_for ('ISP_Instructions') }}">IS&P Process</a>
+                    <a class="active" href="{{ url_for ('Approved_software') }}">Approved Software</a>
+                    <a href="{{ url_for ('Contacts') }}">Contacts</a>
+                </div>
+            </div>
+                
+            <div class="header">
+            <div class="overlay overlay_1">
+                <h2>Approved Software</h2> 
+            </div>
+        </div>
+                </div> <br>
+            <div class="container">
+            <div class="left1">
+                <br>
+                <br>
+                <form id="form"> 
+                    <input class="input" type="search" id="query" name="q" placeholder="Search...">
+                    <button>
+                        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                      </button>
+                  </form>
+                  <br>
+                <div class="checkbox">
+                    <ul style="list-style-type: none;">
+                      <p>Filter on: </p>
+                      <li>
+                        <p class="checkbox_title">Type of software</p> 
+                        <input type="checkbox" id="checkbox-0" name="checkboxname" aria-describedby="" aria-errormessage="" required="">
+                        <label for="checkbox-0">Communication</label><br>
+                        <input type="checkbox" id="checkbox-1" name="checkboxname" aria-describedby="" aria-errormessage="" required="">
+                        <label for="checkbox-1">Utility</label><br>
+                        <input type="checkbox" id="checkbox-2" name="checkboxname" aria-describedby="" aria-errormessage="" required="">
+                        <label for="checkbox-2">Web design</label>
+                      </li><br>
+                      <hr class="hr"><br>
+                      <li>
+                        <p class="checkbox_title">Faculty</p> 
+                        <input type="checkbox" id="checkbox-3" name="checkboxname" aria-describedby="" aria-errormessage="" required="">
+                        <label for="checkbox-3">Faculty of Law</label><br>
+                        <input type="checkbox" id="checkbox-4" name="checkboxname" aria-describedby="" aria-errormessage="" required="">
+                        <label for="checkbox-4">Faculty of Humanities</label><br>
+                        <input type="checkbox" id="checkbox-5" name="checkboxname" aria-describedby="" aria-errormessage="" required="">
+                        <label for="checkbox-5">Faculty of Science</label>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="container">
+            <div class="right1">
+                <div class="box1"> 
+                    <h2>Euroglot </h2>
+                    <p>Euroglot is a multilingual translation software that supports over 80 languages. It provides users with features such as built-in dictionaries, phrasebooks, and thesauruses. Euroglot also includes tools for language learning, including pronunciation guides and grammar rules. </p>
+                <hr>
+                </div>
+                <div class="box1"> 
+                    <h2> Mathtype </h2>
+                    <p>MathType is a software tool designed for creating and editing mathematical equations and formulas in documents, presentations, and web pages. It offers a user-friendly interface and supports a wide range of operations. MathType is compatible with many applications such as Microsoft Word, Google Docs, and Adobe InDesign.</p>
+                <hr>
+                </div>
+                <div class="box1"> 
+                    <h2>Python Anaconda </h2>
+                    <p>Anaconda is a Python distribution that simplifies coding, package management, and deployment for data science and machine learning. Developed by Continuum Analytics, it provides a user-friendly interface to install and manage various Python packages, including popular data science and machine learning libraries.</p>
+                <hr>
+                </div>
+                <div class="box1"> 
+                    <h2>Cmap Tools</h2>
+                    <p>Cmap Tools is a software application for creating concept maps and diagrams. Developed by the Florida Institute for Human and Machine Cognition, it provides a user-friendly interface for visualizing and organizing ideas and information. Cmap Tools has been widely used in education and research for knowledge representation and sharing.</p>
+                <hr>
+                </div>
+                <div class="box1">
+                    <h2>UCINET</h2>
+                    <p>UCINET is a software package for social network analysis and visualization. Developed by Analytic Technologies, it provides a wide range of tools and algorithms for exploring and analyzing social networks and relational data. UCINET has been used in a variety of research fields, including sociology, anthropology, and management science.</p>
+                <hr>
+                </div>
+            </div>
+            </div> 
+            <br> 
+            <br>
+            <br>
+            <img class="footer" src="https://zeroheight-uploads.s3.eu-west-1.amazonaws.com/ec62f1c75cab13092ad0d0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVNYHQKZBXKWVOV%2F20230330%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20230330T102730Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=3fd2e6e175dfa8628629653800aeb008ad7b54e34d9051983eb7fec2c6220225">
+            </body>
+    </html> 
+    
