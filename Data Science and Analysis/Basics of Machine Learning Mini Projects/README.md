@@ -3,6 +3,4 @@ The mini projects include different predictive algorithms used on the Global Ter
 related to terrorism, making a prediction based on learning and training on the historical data. The models created were further
 evaluated to assess performance. 
 
-The folder also includes exercises such as web scraping, API implementation, NLP and network analysis.
 
-All of these projects and exercises were done as academic projects. 
